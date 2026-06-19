@@ -42,7 +42,7 @@ RECIPIENTS = [e.strip() for e in os.environ.get("NOTIFY_EMAILS", "").split(",") 
 
 # SMTP credentials from env vars
 SMTP_HOST = os.environ.get("SMTP_HOST", "smtp.gmail.com")
-SMTP_PORT = int(os.environ.get("SMTP_PORT", "587"))
+SMTP_PORT = int(os.environ.get("SMTP_PORT", or "587"))
 SMTP_USER = os.environ.get("SMTP_USER", "")
 SMTP_PASS = os.environ.get("SMTP_PASS", "")
 FROM_NAME  = "iDATA Duyuru Monitoru"
